@@ -20,7 +20,7 @@ export default function CTA() {
           </p>
         </div>
 
-        <a href="mailto:info@steptosale.com" className="cta-btn">
+        <a href="mailto:partners@steptosale.com" className="cta-btn">
           START TODAY <span>→</span>
         </a>
       </div>

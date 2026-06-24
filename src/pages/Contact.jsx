@@ -9,6 +9,7 @@ import {
 export default function Contact() {
   const handleSubmit = async (e) => {
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
     e.preventDefault();
 
     const formData = {
@@ -31,7 +32,6 @@ export default function Contact() {
 
     const result = await response.json();
     if (result.ok) {
-
       // Clear all fields
       form.reset();
       setSubmitted(true);
