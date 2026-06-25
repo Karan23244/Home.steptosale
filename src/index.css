@@ -94,9 +94,9 @@ nav {
 @keyframes glowPulse{ 0%,100%{ opacity:1; transform:scale(1) } 50%{ opacity:0.6; transform:scale(1.1) } }
 
 .hero-content{ position:relative; z-index:10; max-width:1400px; width:100%; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center }
-.hero-eyebrow{ font-family:"Barlow Condensed", sans-serif; font-size:12px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--red); margin-bottom:24px; display:flex; align-items:center; gap:12px; opacity:0; animation: fadeUp .8s ease forwards .2s }
+.hero-eyebrow{ font-family:"Barlow Condensed", sans-serif; font-size:18px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--red); margin-bottom:24px; display:flex; align-items:center; gap:12px; opacity:0; animation: fadeUp .8s ease forwards .2s }
 .hero-eyebrow::before{ content:""; display:block; width:40px; height:1px; background:var(--red) }
-.hero-title{ font-family:"Bebas Neue", sans-serif; font-size:clamp(72px,8vw,120px); line-height:0.9; letter-spacing:-1px; color:var(--white); opacity:0; animation:fadeUp .8s ease forwards .4s;font-weight: bold; }
+.hero-title{ font-family:"Bebas Neue", sans-serif; font-size:clamp(52px,8vw,55px); line-height:0.9; letter-spacing:-1px; color:var(--white); opacity:0; animation:fadeUp .8s ease forwards .4s;font-weight: bold; }
 .hero-title span{ color:var(--red); display:block; position:relative }
 .hero-sub{ font-size:17px; font-weight:300; line-height:1.7; color: rgba(245,245,240,0.65); margin-top:28px; max-width:480px; opacity:0; animation:fadeUp .8s ease forwards .6s }
 .hero-actions{ display:flex; gap:16px; margin-top:48px; opacity:0; animation:fadeUp .8s ease forwards .8s }
@@ -120,7 +120,7 @@ nav {
 
 section{ padding:120px 60px }
 .section-inner{ max-width:1400px; margin:0 auto }
-.section-label{ font-family:"Barlow Condensed", sans-serif; font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--red); margin-bottom:16px; display:flex; align-items:center; gap:12px }
+.section-label{ font-family:"Barlow Condensed", sans-serif; font-size:18px; font-weight:600; letter-spacing:4px; text-transform:uppercase; color:var(--red); margin-bottom:16px; display:flex; align-items:center; gap:12px }
 .section-label::before{ content:""; display:block; width:30px; height:1px; background:var(--red) }
 .section-title{ font-family:"Bebas Neue", sans-serif; font-size:clamp(48px,6vw,80px); line-height:0.95 }
 
@@ -136,7 +136,7 @@ section{ padding:120px 60px }
 .audience::before{ content:""; position:absolute; top:0; left:50%; width:1px; height:100%; background: rgba(227,30,36,0.2) }
 .audience-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:80px }
 .audience-panel{ padding:72px 60px; background:var(--black); transition:background .3s }
-.audience-tag{ display:inline-block; font-family:"Barlow Condensed", sans-serif; font-size:11px; font-weight:600; letter-spacing:3px; text-transform:uppercase; background:var(--red); color:var(--white); padding:6px 16px; margin-bottom:32px; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%) }
+.audience-tag{ display:inline-block; font-family:"Barlow Condensed", sans-serif; font-size:18px; font-weight:600; letter-spacing:3px; text-transform:uppercase; background:var(--red); color:var(--white); padding:6px 16px; margin-bottom:32px; clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%) }
 .benefit-list{ list-style:none; display:flex; flex-direction:column; gap:14px }
 .benefit-list li{ display:flex; align-items:flex-start; gap:14px; font-size:14px; color:rgba(245,245,240,0.7) }
 .benefit-list li::before{ content:"✓"; margin-left:-32px; color:var(--red); font-size:22px; font-weight:700 }
@@ -160,7 +160,7 @@ footer{ background:var(--black); padding:80px 60px 40px; border-top:1px solid rg
 .footer-inner{ max-width:1400px; margin:0 auto }
 .footer-top{ display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:10px; margin-bottom:10px }
 .footer-brand img{ height:100px; margin-bottom:10px }
-.footer-tagline{ font-family:"Barlow Condensed", sans-serif; font-size:13px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--red); margin-top:20px }
+.footer-tagline{ font-family:"Barlow Condensed", sans-serif; font-size:16px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:var(--red); margin-top:20px }
 
 @keyframes fadeUp{ from{ opacity:0; transform:translateY(30px)} to{ opacity:1; transform:translateY(0)} }
 @keyframes fadeIn{ from{ opacity:0 } to{ opacity:1 } }
@@ -1444,4 +1444,100 @@ footer{ background:var(--black); padding:80px 60px 40px; border-top:1px solid rg
   .legal-section li {
     font-size: 15px;
   }
+}
+/* ====================================
+   Premium Magnetic Button
+==================================== */
+
+.btn-primary,
+.cta-btn,
+.btn-white {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  transition:
+    transform 0.45s cubic-bezier(.22,1,.36,1),
+    box-shadow 0.45s cubic-bezier(.22,1,.36,1),
+    filter 0.45s ease,
+    letter-spacing 0.35s ease;
+  will-change: transform;
+}
+
+/* Soft light reflection */
+.btn-primary::before,
+.cta-btn::before,
+.btn-white::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255,255,255,.18) 0%,
+      rgba(255,255,255,.08) 28%,
+      transparent 70%
+    );
+
+  background-size: 220% 220%;
+  opacity: 0;
+  transition: opacity .45s ease;
+}
+
+/* Hover */
+.btn-primary:hover,
+.cta-btn:hover,
+.btn-white:hover {
+  transform: translateY(-3px) scale(1.02);
+
+  letter-spacing: .6px;
+
+  box-shadow:
+    0 10px 22px rgba(227,30,36,.18),
+    0 3px 10px rgba(0,0,0,.22);
+
+  filter: brightness(1.04);
+}
+
+.btn-primary:hover::before,
+.cta-btn:hover::before,
+.btn-white:hover::before {
+  opacity: 1;
+  animation: buttonLight 5s ease-in-out infinite;
+}
+
+/* Press */
+.btn-primary:active,
+.cta-btn:active,
+.btn-white:active {
+  transform: translateY(-1px) scale(.99);
+  transition-duration: .12s;
+}
+
+/* Gentle moving reflection */
+@keyframes buttonLight {
+
+  0% {
+    background-position: 25% 30%;
+  }
+
+  25% {
+    background-position: 70% 20%;
+  }
+
+  50% {
+    background-position: 80% 70%;
+  }
+
+  75% {
+    background-position: 30% 80%;
+  }
+
+  100% {
+    background-position: 25% 30%;
+  }
+
 }

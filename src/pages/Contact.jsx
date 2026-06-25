@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import {
   FaEnvelope,
   FaMapMarkerAlt,
@@ -7,9 +7,9 @@ import {
 } from "react-icons/fa";
 
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const handleSubmit = async (e) => {
-    const [submitted, setSubmitted] = useState(false);
-    const [loading, setLoading] = useState(false);
     e.preventDefault();
 
     const formData = {

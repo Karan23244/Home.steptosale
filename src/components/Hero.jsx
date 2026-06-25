@@ -10,22 +10,16 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-left">
           <div className="hero-eyebrow">Performance Marketing Agency</div>
-          <h1 className="hero-title">
-            STEP
-            <br />
-            <span data-text="TO SALE">TO SALE</span>
-          </h1>
+          <h1 className="hero-title">Every Click. Every Lead. Every Sale.</h1>
           <p className="hero-sub">
-            We engineer growth at every stage of the funnel — from impression to
-            conversion — with data-driven performance marketing that leaves
-            nothing to chance.
+            Step To Sale helps advertisers achieve profitable growth through
+            performance-driven marketing solutions. Reach engaged audiences,
+            generate quality leads, and turn marketing investments into
+            measurable business results.
           </p>
           <div className="hero-actions">
             <a href="#advertisers" className="btn-primary">
-              For Advertisers
-            </a>
-            <a href="/contact" className="btn-primary">
-              Contact Sales
+              Advertisers with US
             </a>
           </div>
           <div className="hero-stats">
