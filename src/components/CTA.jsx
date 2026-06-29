@@ -19,9 +19,12 @@ export default function CTA() {
             you there.
           </p>
         </div>
-
-        <a href="mailto:partners@steptosale.com" className="cta-btn">
-          START TODAY <span>→</span>
+        <a href="#" class="cta-btn">
+          <span class="snake"></span>
+          <span class="snake"></span>
+          <span class="snake"></span>
+          <span class="snake"></span>
+          Get Started <span>→</span>
         </a>
       </div>
     </section>

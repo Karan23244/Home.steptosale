@@ -21,7 +21,9 @@ import Contact from "./pages/Contact";
 import Inventories from "./components/Inventry";
 import Disclaimer from "./pages/Disclaimer";
 import CookiePolicy from "./pages/Cookies";
-
+import FraudSafety from "./pages/Fraudsafety";
+import DMCAPolicy from "./pages/Dmcapolicy";
+import EditorialContent from "./pages/EditorialContent";
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -74,7 +76,6 @@ export default function App() {
             element={
               <>
                 <Hero />
-                <Marquee />
                 <Services />
                 <Inventories />
                 <Brands />
@@ -93,6 +94,10 @@ export default function App() {
           <Route path="/disclaimer" element={<Disclaimer />} />
           <Route path="/terms" element={<Terms />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fraud-safety" element={<FraudSafety />} />
+          <Route path="/dmca-policy" element={<DMCAPolicy />} />
+          <Route path="/editorial-content" element={<EditorialContent />} />
+          
           <Route
             path="/brands"
             element={

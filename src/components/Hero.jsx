@@ -1,12 +1,22 @@
 import React from "react";
-
+import NetworkBackground from "../components/NetworkBackground";
+const items = [
+  "Programmatic Display",
+  "Attribution Modeling",
+  "Social Ads",
+  "Mobile Marketing",
+  "Web Marketing",
+  "Performance, Perfected",
+];
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero-bg" />
-      <div className="hero-grid" />
-      <div className="hero-noise" />
-      <div className="hero-glow" />
+      <div className="hero-three-bg">
+        <NetworkBackground />
+      </div>
+
+      <div className="hero-overlay" />
+
       <div className="hero-content">
         <div className="hero-left">
           <div className="hero-eyebrow">Performance Marketing Agency</div>
@@ -18,8 +28,12 @@ export default function Hero() {
             measurable business results.
           </p>
           <div className="hero-actions">
-            <a href="#advertisers" className="btn-primary">
-              Advertisers with US
+            <a href="/contact" className="btn-primary">
+              Get Started
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </a>
           </div>
           <div className="hero-stats">
@@ -35,14 +49,27 @@ export default function Hero() {
               <div className="stat-num">2000+</div>
               <div className="stat-label">Offers</div>
             </div>
+            <div className="stat-item">
+              <div className="stat-num">2Mn+</div>
+              <div className="stat-label">Monthly Engagements</div>
+            </div>
           </div>
         </div>
-        <div className="hero-right">
-          <div className="hero-logo-display">
-            <div className="hero-ring" />
-            <div className="hero-ring" />
-            <img src="/logo.png" alt="Step To Sale Logo" />
-          </div>
+      </div>
+
+      {/* Move here */}
+      <div className="marquee-strip">
+        <div className="marquee-track">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <React.Fragment key={i}>
+              {items.map((it) => (
+                <React.Fragment key={it}>
+                  <span>{it}</span>
+                  <div className="marquee-dot" />
+                </React.Fragment>
+              ))}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>

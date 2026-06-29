@@ -37,6 +37,26 @@ export default function Footer() {
               <li>
                 <Link to="/contact">Contact Us</Link>
               </li>
+              <li>
+                <Link to="/editorial-content">Editorial Content</Link>
+              </li>
+              <li>
+                <a
+                  href="/media-kit.pdf"
+                  download="Step-to-Sale-Media-Kit.pdf"
+                  onClick={(e) => {
+                    e.preventDefault();
+
+                    const link = document.createElement("a");
+                    link.href = "/media-kit.pdf";
+                    link.download = "Step-to-Sale-Media-Kit.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}>
+                  Media Kit
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -59,6 +79,12 @@ export default function Footer() {
               <li>
                 <Link to="/disclaimer">Disclaimer</Link>
               </li>
+              <li>
+                <Link to="/dmca-policy">DMCA Policy</Link>
+              </li>
+              <li>
+                <Link to="/fraud-safety">Fraud Safety</Link>
+              </li>
             </ul>
           </div>
 
@@ -68,9 +94,7 @@ export default function Footer() {
 
             <p>Email us at</p>
 
-            <a href="mailto:info@steptosale.com" className="footer-email">
-              partners@steptosale.com
-            </a>
+            <a href="mailto:info@steptosale.com">partners@steptosale.com</a>
 
             <div className="footer-address">
               <p>Step To Sale LLC</p>

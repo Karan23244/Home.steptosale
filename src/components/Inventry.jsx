@@ -21,22 +21,17 @@ const inventories = [
 
 export default function Inventories() {
   return (
-    <section className="inventories-section" id="advertisers" >
+    <section className="inventories-section" id="advertisers">
       <div className="section-inner">
         <div className="inventories-grid">
           {/* Left Image */}
           <div className="inventories-image">
-            <img
-              src="/team.webp"
-              alt="Team Meeting"
-            />
+            <img src="/team.webp" alt="Team Meeting" />
           </div>
 
           {/* Right Content */}
           <div className="inventories-content">
-            <div className="section-label">
-              OUR INVENTORIES
-            </div>
+            <div className="section-label">OUR INVENTORIES</div>
 
             <h2 className="inventories-title">
               Premium Traffic.
@@ -49,8 +44,7 @@ export default function Inventories() {
                 <div className="inventory-item" key={index}>
                   <div
                     className="inventory-icon"
-                    style={{ background: item.color }}
-                  >
+                    style={{ background: item.color }}>
                     <FaCheck />
                   </div>
 
@@ -62,8 +56,12 @@ export default function Inventories() {
               ))}
             </div>
 
-            <a href="/contact" className="btn-primary">
+            <a href="/advertisers" className="btn-primary">
               Start Growing
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
             </a>
           </div>
         </div>
