@@ -18,10 +18,10 @@ export default function Nav() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/advertisers">Advertisers</a>
+          <Link to="/advertisers">Advertisers</Link>
         </li>
         <li>
-          <a href="#brands">Brands</a>
+          <Link to="/#brands">Brands</Link>
         </li>
         <li>
           <Link to="/about">About</Link>
@@ -30,7 +30,7 @@ export default function Nav() {
           <Link to="/privacy">Privacy Policy</Link>
         </li>
         <li>
-          <BookCall/>
+          <BookCall />
         </li>
       </ul>
 
@@ -47,7 +47,7 @@ export default function Nav() {
         <Link to="/advertisers" onClick={() => setIsOpen(false)}>
           Advertisers
         </Link>
-        <Link to="#brands" onClick={() => setIsOpen(false)}>
+        <Link to="/#brands" onClick={() => setIsOpen(false)}>
           Brands
         </Link>
         <Link to="/about" onClick={() => setIsOpen(false)}>

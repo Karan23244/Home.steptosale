@@ -25,10 +25,20 @@ import FraudSafety from "./pages/Fraudsafety";
 import DMCAPolicy from "./pages/Dmcapolicy";
 import EditorialContent from "./pages/EditorialContent";
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (hash) {
+      const id = hash.replace("#", "");
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
 
     const reveals = document.querySelectorAll(".reveal");
     const io = new IntersectionObserver(
@@ -43,7 +53,7 @@ function ScrollToTop() {
     reveals.forEach((reveal) => io.observe(reveal));
 
     return () => io.disconnect();
-  }, [pathname]);
+  }, [pathname, hash]);
 
   return null;
 }
@@ -97,7 +107,7 @@ export default function App() {
           <Route path="/fraud-safety" element={<FraudSafety />} />
           <Route path="/dmca-policy" element={<DMCAPolicy />} />
           <Route path="/editorial-content" element={<EditorialContent />} />
-          
+
           <Route
             path="/brands"
             element={
